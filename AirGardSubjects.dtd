@@ -1,0 +1,122 @@
+<!--see https://xmlwriter.net/xml_guide/doctype_declaration.shtml#internalDTD-->
+<!ELEMENT AirGard (SoftwareVersion*,DataBlockVersion*,Timestamp*,Status,Diagnostics*,Data*)>
+	<!ATTLIST AirGard serial CDATA #REQUIRED>
+<!ELEMENT SoftwareVersion (#PCDATA)>
+<!ELEMENT DataBlockVersion (#PCDATA)>
+<!ELEMENT Timestamp (InstrumentTime*,MeasurementTime*)>
+<!ELEMENT InstrumentTime (#PCDATA)>
+	<!ATTLIST InstrumentTime format CDATA #REQUIRED>
+<!ELEMENT MeasurementTime (#PCDATA)>
+	<!ATTLIST MeasurementTime format CDATA #REQUIRED>
+<!ELEMENT Status (Info*,Sensor*,OperatingTime*,WarningMessage*)>
+<!ELEMENT Info (BootStatus*,SnapshotStatus*,SCPStatus*,SFTPStatus*,RunScriptStatus*,ArchiveStatus*,AncillarySensorStatus*)>
+<!ELEMENT BootStatus (#PCDATA)>
+	<!ATTLIST BootStatus code CDATA #REQUIRED>
+<!ELEMENT SnapshotStatus (#PCDATA)>
+	<!ATTLIST SnapshotStatus code CDATA #REQUIRED>
+<!ELEMENT SCPStatus (#PCDATA)>
+	<!ATTLIST SCPStatus code CDATA #REQUIRED>
+<!ELEMENT SFTPStatus (#PCDATA)>
+	<!ATTLIST SFTPStatus code CDATA #REQUIRED>
+<!ELEMENT RunScriptStatus (#PCDATA)>
+	<!ATTLIST RunScriptStatus code CDATA #REQUIRED>
+<!ELEMENT ArchiveStatus (#PCDATA)>
+	<!ATTLIST ArchiveStatus code CDATA #REQUIRED>
+<!ELEMENT AncillarySensorStatus (#PCDATA)>
+	<!ATTLIST AncillarySensorStatus code CDATA #REQUIRED>
+<!ELEMENT Sensor (#PCDATA)>
+<!ELEMENT OperatingTime (#PCDATA)>
+	<!ATTLIST OperatingTime unit CDATA #REQUIRED>
+<!ELEMENT WarningMessage (#PCDATA)>
+<!ELEMENT Diagnostics (IgramPP*,IgramDC*,LaserPP*,LaserDC*,SingleBeamAt900*,SingleBeamAt2500*,SignalToNoiseAt2500*,CenterBurstLocation*,DetectorTemp*,LaserFrequency*,HardDriveSpace*,Flow*,Temperature*,Pressure*,TempOptics*,BadScanCounter*,FreeMemorySpace*,LABFilename*,LOGFilename*,LgFilename*,SecondLgFilename*,SystemCounter*,DetectorCounter*,LaserCounter*,FlowPumpCounter*,DesiccantCounter*)>
+<!ELEMENT IgramPP (#PCDATA)>
+	<!ATTLIST IgramPP unit CDATA #REQUIRED>
+	<!ATTLIST IgramPP fault CDATA #REQUIRED>
+	<!ATTLIST IgramPP status CDATA #REQUIRED>
+<!ELEMENT IgramDC (#PCDATA)>
+        <!ATTLIST IgramDC unit CDATA #REQUIRED>
+        <!ATTLIST IgramDC fault CDATA #REQUIRED>
+        <!ATTLIST IgramDC status CDATA #REQUIRED>
+<!ELEMENT LaserPP (#PCDATA)>
+        <!ATTLIST LaserPP unit CDATA #REQUIRED>
+        <!ATTLIST LaserPP fault CDATA #REQUIRED>
+        <!ATTLIST LaserPP status CDATA #REQUIRED>
+<!ELEMENT LaserDC (#PCDATA)>
+        <!ATTLIST LaserDC unit CDATA #REQUIRED>
+        <!ATTLIST LaserDC fault CDATA #REQUIRED>
+        <!ATTLIST LaserDC status CDATA #REQUIRED>
+<!ELEMENT SingleBeamAt900 (#PCDATA)>
+        <!ATTLIST SingleBeamAt900 unit CDATA #REQUIRED>
+        <!ATTLIST SingleBeamAt900 fault CDATA #REQUIRED>
+        <!ATTLIST SingleBeamAt900 status CDATA #REQUIRED>
+<!ELEMENT SingleBeamAt2500 (#PCDATA)>
+        <!ATTLIST SingleBeamAt2500 unit CDATA #REQUIRED>
+        <!ATTLIST SingleBeamAt2500 fault CDATA #REQUIRED>
+        <!ATTLIST SingleBeamAt2500 status CDATA #REQUIRED>
+<!ELEMENT SignalToNoiseAt2500 (#PCDATA)>
+        <!ATTLIST SignalToNoiseAt2500 unit CDATA #REQUIRED>
+        <!ATTLIST SignalToNoiseAt2500 fault CDATA #REQUIRED>
+        <!ATTLIST SignalToNoiseAt2500 status CDATA #REQUIRED>
+<!ELEMENT CenterBurstLocation (#PCDATA)>
+        <!ATTLIST CenterBurstLocation unit CDATA #REQUIRED>
+        <!ATTLIST CenterBurstLocation fault CDATA #REQUIRED>
+        <!ATTLIST CenterBurstLocation status CDATA #REQUIRED>
+<!ELEMENT DetectorTemp (#PCDATA)>
+        <!ATTLIST DetectorTemp unit CDATA #REQUIRED>
+        <!ATTLIST DetectorTemp fault CDATA #REQUIRED>
+        <!ATTLIST DetectorTemp status CDATA #REQUIRED>
+<!ELEMENT LaserFrequency (#PCDATA)>
+        <!ATTLIST LaserFrequency unit CDATA #REQUIRED>
+        <!ATTLIST LaserFrequency fault CDATA #REQUIRED>
+        <!ATTLIST LaserFrequency status CDATA #REQUIRED>
+<!ELEMENT HardDriveSpace (#PCDATA)>
+        <!ATTLIST HardDriveSpace unit CDATA #REQUIRED>
+        <!ATTLIST HardDriveSpace fault CDATA #REQUIRED>
+        <!ATTLIST HardDriveSpace status CDATA #REQUIRED>
+<!ELEMENT Flow (#PCDATA)>
+        <!ATTLIST Flow unit CDATA #REQUIRED>
+        <!ATTLIST Flow fault CDATA #REQUIRED>
+        <!ATTLIST Flow status CDATA #REQUIRED>
+<!ELEMENT Temperature (#PCDATA)>
+        <!ATTLIST Temperature unit CDATA #REQUIRED>
+        <!ATTLIST Temperature fault CDATA #REQUIRED>
+        <!ATTLIST Temperature status CDATA #REQUIRED>
+<!ELEMENT Pressure (#PCDATA)>
+        <!ATTLIST Pressure unit CDATA #REQUIRED>
+        <!ATTLIST Pressure fault CDATA #REQUIRED>
+        <!ATTLIST Pressure status CDATA #REQUIRED>
+<!ELEMENT TempOptics (#PCDATA)>
+        <!ATTLIST TempOptics unit CDATA #REQUIRED>
+        <!ATTLIST TempOptics fault CDATA #REQUIRED>
+        <!ATTLIST TempOptics status CDATA #REQUIRED>
+<!ELEMENT BadScanCounter (#PCDATA)>
+        <!ATTLIST BadScanCounter unit CDATA #REQUIRED>
+        <!ATTLIST BadScanCounter fault CDATA #REQUIRED>
+        <!ATTLIST BadScanCounter status CDATA #REQUIRED>
+<!ELEMENT FreeMemorySpace (#PCDATA)>       
+        <!ATTLIST FreeMemorySpace unit CDATA #REQUIRED>
+        <!ATTLIST FreeMemorySpace fault CDATA #REQUIRED>
+        <!ATTLIST FreeMemorySpace status CDATA #REQUIRED>
+<!ELEMENT LABFilename (#PCDATA)>        
+<!ELEMENT LOGFilename (#PCDATA)>
+<!ELEMENT LgFilename (#PCDATA)>
+<!ELEMENT SecondLgFilename (#PCDATA)>
+<!ELEMENT SystemCounter (#PCDATA)>
+	<!ATTLIST SystemCounter unit CDATA #REQUIRED>
+<!ELEMENT DetectorCounter (#PCDATA)>
+	<!ATTLIST DetectorCounter unit CDATA #REQUIRED>
+<!ELEMENT LaserCounter (#PCDATA)>
+	<!ATTLIST LaserCounter unit CDATA #REQUIRED>
+<!ELEMENT FlowPumpCounter (#PCDATA)>
+	<!ATTLIST FlowPumpCounter unit CDATA #REQUIRED>
+<!ELEMENT DesiccantCounter (#PCDATA)>
+	<!ATTLIST DesiccantCounter unit CDATA #REQUIRED>
+<!ELEMENT Data (Alarms,Alarm*,NonAlarms)>
+<!ELEMENT Alarms (#PCDATA)>
+<!ELEMENT Alarm (Tag*,Name*,Probability*,CASnumber*,Concentration*)>
+<!ELEMENT Tag (#PCDATA)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Probability (#PCDATA)>
+<!ELEMENT CASnumber (#PCDATA)>
+<!ELEMENT Concentration (#PCDATA)>
+<!ELEMENT NonAlarms (#PCDATA)>
